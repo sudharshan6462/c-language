@@ -1,1 +1,19 @@
-
+#include <stdio.h>
+int main()
+{
+    int a,b,step;
+    printf("enter two nums");
+    scanf("%d%d",&a,&b);
+ 
+    int big=a>b?a:b;
+    step=big;//ternary operator
+    while(1)
+    {
+        if(big%a==0 && big%b==0)
+        break;
+        else
+        big=big+step;
+    }
+     printf("The LCM is %d",big);
+    return 0;
+}
